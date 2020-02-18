@@ -7,15 +7,17 @@ import moment from 'moment'
 
 
 const ProjectDetails = (props) => {
+    
     // console.log(props);
     // const id = props.match.params.id;
     // console.log(project);
     const {project , auth}=props;
+    // console.log(project.createdAt);
     // console.log(project);
-    
-    if(!auth.uid) return <Redirect to='/signin'/>
+    if(!auth.uid) return <Redirect to='/signup'/>
     if (project){
         return(
+          
             <div className="container section project-details">
             <div className="card z-depth-0">
                 <div className="card-content">
@@ -28,6 +30,7 @@ const ProjectDetails = (props) => {
                 </div>
             </div>
         </div>
+       
         )
     } else {return (
         <div className="container center">Loading...</div>

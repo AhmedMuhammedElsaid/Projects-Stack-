@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const ProjectList = ({ projects }) => {
     // console.log(projects);
     return (
+
         <div className="project-list section">
             {projects && projects.map(project => {
                 return (
@@ -14,6 +15,7 @@ const ProjectList = ({ projects }) => {
             }
             )}
         </div>
+
     )
 }
 export default ProjectList
