@@ -22,34 +22,37 @@ export class CreateProject extends Component {
     render() {
         const { auth } = this.props;
         if (!auth.uid) return <Redirect to='/signin' />
-
         return (
-
+            <div className="row">
+                <div className="col s12 l9 push-l2">
+                
             <div className="container">
-                <form className="white" onSubmit={this.handleSubmit}>
-                    <h1 className=" grey-text text-darken-2">Create Project</h1>
+                <form className=" project-form" onSubmit={this.handleSubmit}>
+                    <h1 className=" white-text text-darken-2">Create A Project</h1>
                     <div className="input-field">
-                        <label htmlFor="title">Project Title</label>
+                        <label htmlFor="title"  className="white-text">Project Title</label>
                         <input
+                      
                             type="text"
                             name="title" id="title"
                             onChange={this.handleChange}
                         />
                     </div>
                     <div className="input-field">
-                        <label htmlFor="content">Content</label>
+                        <label htmlFor="content"   className="white-text">Content</label>
                         <textarea className="materialize-textarea"
                             id="content" name="content"
                             onChange={this.handleChange}
                         >
                         </textarea>
                     </div>
-                    <div className="input-field">
-                        <button className="btn pink text-lighten-1" > Create Project</button>
+                    <div className="input-field center">
+                        <button className="btn-large waves-effect waves-light pink darken-1 " > Create Project</button>
                     </div>
                 </form>
             </div>
-
+                </div>
+            </div>
         )
     }
 }
