@@ -30,9 +30,7 @@ p,.project-summary, .section  {
   transform: translateY(-20px);
   opacity: 0;
 }
-ul li a {
-  font-size: 21px;
-}
+
 
 @keyframes article-load {
   0% {
@@ -54,9 +52,6 @@ padding: 15px;
 margin-top: 50px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, .5);
-}
-.notifications{
-  border-radius: 48px;
 }
 
 form button,form h5{

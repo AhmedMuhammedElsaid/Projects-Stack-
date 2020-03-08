@@ -15,9 +15,11 @@ export class CreateProject extends Component {
         e.preventDefault();
         // console.log(this.state);
         // console.log(this.props);
+    if (this.state.title){
         this.props.createProject(this.state);
         this.props.history.push('/');
-
+    }
+   
     }
     render() {
         const { auth } = this.props;
@@ -32,7 +34,7 @@ export class CreateProject extends Component {
                     <div className="input-field">
                         <label htmlFor="title"  className="white-text">Project Title</label>
                         <input
-                      
+                        required
                             type="text"
                             name="title" id="title"
                             onChange={this.handleChange}
@@ -43,6 +45,7 @@ export class CreateProject extends Component {
                         <textarea className="materialize-textarea"
                             id="content" name="content"
                             onChange={this.handleChange}
+                            required
                         >
                         </textarea>
                     </div>

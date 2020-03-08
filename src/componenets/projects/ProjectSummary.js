@@ -7,7 +7,7 @@ const ProjectSummary = ({ project }) => {
             <div className="card-content gray-text">
                 <span className="card-title pink-text">{project.title}</span>
                 <p className="black-text">Posted by {project.authorFirstName} {project.authorLastName}</p>
-                <p className="grey-text">{moment(project.createdAt.toDate()).calendar()}</p>
+                <p className="grey-text">{project.createdAt ? moment(project.createdAt.toDate()).calendar() :null}</p>
             </div>
         </div>
     )
